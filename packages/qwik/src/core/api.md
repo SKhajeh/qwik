@@ -30,6 +30,8 @@ export interface ClientContainer extends Container {
     // (undocumented)
     $setRawState$(id: number, vParent: _ElementVNode | _VirtualVNode): void;
     // (undocumented)
+    clientVNodeRefs: WeakMap<Element, _ElementVNode>;
+    // (undocumented)
     document: _QDocument;
     // (undocumented)
     element: _ContainerElement;
@@ -190,6 +192,8 @@ class DomContainer extends _SharedContainer implements ClientContainer {
     // (undocumented)
     $storeProxyMap$: ObjToProxyMap;
     constructor(element: _ContainerElement);
+    // (undocumented)
+    clientVNodeRefs: WeakMap<Element, _ElementVNode>;
     // (undocumented)
     document: _QDocument;
     // (undocumented)

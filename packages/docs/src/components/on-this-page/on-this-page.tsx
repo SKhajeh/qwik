@@ -147,14 +147,14 @@ export const OnThisPage = component$(() => {
           }
         });
 
-        return () => {
+        return (() => {
           itemIds.forEach((id) => {
             const element = document.getElementById(id);
             if (element) {
               observer.unobserve(element);
             }
           });
-        };
+        })();
       })
     );
 
